@@ -204,3 +204,25 @@ input {
 
 
 }  
+
+.reg_img{
+    height: 950px;
+    margin-top: 0px;
+    background-image: url("images/4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box2{
+    height: 589px;
+    width: 400px;
+    background-color: black;
+    margin: 0px auto;
+    opacity: .7;
+    color: white;
+    padding: 20px;
+}
+
+form [name="Registration"] {
+    margin: auto 50px;
+}  
