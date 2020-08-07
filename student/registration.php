@@ -1,5 +1,5 @@
 <?php
- include 'connection.php';
+  include 'connection.php';
   include 'navbar.php';
  
 ?>
@@ -46,7 +46,7 @@
   <div class="reg_img">
         <br>
     <div class="box2">
-        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">Library Management System</h1><br>
+        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">Library Management System</h1>
         <h1 style="text-align: center; font-size: 25px;">User Registration Form</h1><br>
       <form name="Registration" action="" method="post">
         
@@ -58,10 +58,47 @@
           <input class="form-control" type="text" name="roll" placeholder="Roll No" required=""><br>
           <input class="form-control" type="text" name="email" placeholder="Email" required=""><br>
           <input class="form-control" type="text" name="contact" placeholder="Phone No" required=""><br>
-          <input class="btn btn-default" type="text" type="submit" name="submit" value="Sign Up" style="color:black; width: 80px; height: 30px;" >
+          <input class="btn btn-default" type="submit" name="submit" value="Sign Up" style="color:black; width: 80px; height: 30px;" >
 
       </form>
     </div>
   </div>
 </section>
+
+   <?php
+      if(isset($_POST['submit']))
+      {
+        $count = 0;
+        $sql = "SELECT username FROM student";
+        $res = mysqli_query($db, $sql);
+
+        while($row=mysqli_fetch_assoc($res))
+          {
+            if($row['username']==$_POST['username'])
+            {
+              $count = $count + 1;
+            }
+          }
+
+          if($count = 0)
+
+           { mysqli_query($db, "INSERT INTO student VALUES ('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[password]',
+          '$_POST[roll]', '$_POST[email]', '$_POST[contact]' );" );
+
+          ?>
+            <script type="text/javascript">
+              alert("Registration successful");
+            </script>
+          <?php
+                }
+                else 
+                { 
+                  ?>
+            <script type="text/javascript">
+              alert("The username already exist.");
+            </script>
+            <?php
+                }
+            }
+        ?>
 </body> 
