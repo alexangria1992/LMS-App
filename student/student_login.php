@@ -1,5 +1,6 @@
 
 <?php
+  include 'connection.php';
   include 'navbar.php';
  
 ?>
@@ -55,14 +56,14 @@
   <div class="log_img">
     <br> <br><br>
     <div class="box1">
-        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">Library Management System</h1><br>
+        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">Library Management System</h1>
         <h1 style="text-align: center; font-size: 25px;">User Login Form</h1><br>
-      <form name="login" action="" method="">
-        <br><br>
+      <form name="login" action="" method="post">
+        
         <div class="login">
-        <input class="form-control" type="text" name="username" placeholder="Username" required=""> <br><br>
+        <input class="form-control" type="text" name="username" placeholder="Username" required=""> <br>
           <input class="form-control" type="password" name="password" placeholder="Password" required=""> <br>
-          <input class="btn btn-default" type="text" type="submit" name="submit" value="Login" style="color:black; width: 60px; height: 30px;" ></div>
+          <input class="btn btn-default"  type="submit" name="submit" value="Login" style="color:black; width: 60px; height: 30px;" ></div>
       </form>
       <p style="color: white; padding-left: 15px;">
         <br><br>
@@ -73,5 +74,36 @@
   </div>
 </section>
 
+        <?php
+          if(isset($_POST['submit']))
+          { 
+              $count = 0;
+              $res = mysqli_query($db, "SELECT * FROM student WHERE username = '$_POST[username]' && password='$_POST[password]';");
+              $count = mysqli_num_rows($res);
+
+              if($count==0)
+              {
+                ?>
+                    <!--
+                      <script>
+                        alert("The username and password doesn't match.");
+                      </script> -->
+                      <div class="alert alert-danger" style="    width: 440px; margin-left: 852px; background-color: #de1313; color: white; margin-top: -188px;">
+                        <strong>The username and password doesn't match</strong>
+                      </div>    
+                <?php
+              }
+               else 
+               {
+                 ?>
+                  <script>
+                    window.location="index.php";
+                  </script>
+                 <?php
+               }
+          }
+
+
+        ?>
 </body>
 </html>
