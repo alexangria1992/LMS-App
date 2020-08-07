@@ -1,15 +1,29 @@
 
+<?php
+  include 'navbar.php';
+ 
+?>
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
 
   <title>Student Login</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <style type="text/css">
         section {
@@ -20,7 +34,7 @@
   
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<!-- <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
           <a class="navbar-brand active">ONLINE LIBRARY MANAGEMENT SYSTEM</a>
@@ -36,7 +50,7 @@
             <li><a href="registration.php"><span class="glyphicon glyphicon-user"> SIGN UP</span></a></li>
           </ul>
       </div>
-    </nav>
+    </nav> -->
 <section>
   <div class="log_img">
     <br> <br><br>

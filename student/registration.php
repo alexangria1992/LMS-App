@@ -1,3 +1,10 @@
+<?php
+  include 'navbar.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +24,7 @@
   </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<!-- <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
           <a class="navbar-brand active">ONLINE LIBRARY MANAGEMENT SYSTEM</a>
@@ -33,7 +40,7 @@
             <li><a href="registration.php"><span class="glyphicon glyphicon-user"> SIGN UP</span></a></li>
           </ul>
       </div>
-    </nav>
+    </nav> -->
 <section>
   <div class="reg_img">
         <br>
