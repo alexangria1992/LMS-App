@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
     <style type="text/css">
-     
+     nav {
+        float: right;
+        word-spacing: 30px;
+        padding: 20px;
+    }
+
+    nav li {
+        display: inline-block;
+        line-height: 80px;
+    }
     </style>
 <body>
     <div class="wrapper">  
