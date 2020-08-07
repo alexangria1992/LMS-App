@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
     <style type="text/css">
-
+     
     </style>
 <body>
     <div class="wrapper">  
@@ -29,15 +29,14 @@
         </header>
     <section>
     <br><br><br>
-            <div class="box">
+    <div class="sec_img">
                 <br><br><br><br>
-                <h1 style="text-align: center; font-size: 30px;">Welcome to library</h1><br>
-                <h1 style="text-align: center;font-size: 25px;">Opens at 09:00</h1><br>
-                <h1 style="text-align: center;font-size: 25px;">Closes at 15:00</h1><br>
+                <div class="box">
+                    <h1 style="text-align: center; font-size: 30px;">Welcome to library</h1><br>
+                    <h1 style="text-align: center;font-size: 25px;">Opens at 09:00</h1><br>
+                    <h1 style="text-align: center;font-size: 25px;">Closes at 15:00</h1><br>
             </div>
-      
-        <section>
-       
+        </div>
         </section>
         <footer>
         <p style="color: white; text-align: center;">
@@ -45,11 +44,7 @@
               Email: &nbsb Online.library@gmail.com <br><br>
               Mobile: &nbsp +880171****
         </footer>
-    
     </div>
 
-<script>
-     
-</script>
 </body>
 </html>  

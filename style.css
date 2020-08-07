@@ -154,13 +154,22 @@ nav li {
     line-height: 80px;
 
 }
-section {
-    margin-top: 0px;
+section .sec_img{
+    margin-top: -48px;
     background-image: url("images/1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 750px;
 
 }
+
+.log_img{
+    height: 750px;
+    margin-top: 0px;
+    background-image: url("images/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
 
 .box{
     height: 300px;
