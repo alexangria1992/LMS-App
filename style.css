@@ -164,7 +164,7 @@ section .sec_img{
 }
 
 .log_img{
-    height: 750px;
+    height: 950px;
     margin-top: 0px;
     background-image: url("images/3.jpg");
     background-repeat: no-repeat;
@@ -178,4 +178,29 @@ section .sec_img{
     margin: 70px auto;
     opacity: 0.8;
     color: white;
+}  
+
+/*---------------St_login--------------*/
+
+.box1{
+    height: 350px;
+    width: 400px;
+    background-color: black;
+    margin: 70px auto;
+    opacity: .7;
+    color: white;
+    padding: 20px;
+}
+
+form.login{
+    margin: 70px auto;
+
+
+
+}
+input {
+    height: 25px;
+    width: 300px;
+
+
 }  
