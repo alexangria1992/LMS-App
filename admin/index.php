@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,16 +33,40 @@
                 <img style="background-repeat:  no-repeat;;" src="images/9.png" alt="">
                 <h1 style="color: white">ONLINE LIBRARY MANAGEMENT SYSTEM</h1>
             </div>
-        <nav>
-                <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="">BOOKS</a></li>
-                    <li><a href="student_login.php">STUDENT-LOGIN</a></li>
-                    <li><a href="">ADMIN_LOGIN</a></li>
-                    <li><a href="">FEEDBACK</a></li>
-                </ul>
-            </nav>
+
+                <?php
+                if( isset($_SESSION['login_user']))
+                {?>
+                   
+                    <nav>
+                         <ul>
+                        
+                            <li><a href="index.php">HOME</a></li>
+                            <li><a href="books.php">BOOKS</a></li>
+                            <li><a href="logout.php">LOGOUT</a></li>
+                            <li><a href="feedback.php">FEEDBACK</a></li>
+                        </ul>
+                    </nav>
+                    <?php
+            
+                }
+                else
+                {?>
+                     <nav>
+                          <ul>
+                  
+                            <li><a href="index.php">HOME</a></li>
+                            <li><a href="books.php">BOOKS</a></li>
+                            <li><a href="admin_login.php">ADMIN-LOGIN</a></li>
+                            <li><a href="feedback.php">FEEDBACK</a></li>
+                        </ul>
+                    </nav>
+                <?php
+                    
+                }
+                    
+                ?>
+           
         </header>
     <section>
     <br><br><br>
@@ -47,12 +79,9 @@
             </div>
         </div>
         </section>
-        <footer>
-        <p style="color: white; text-align: center;">
-            <br><br>
-              Email: &nbsb Online.library@gmail.com <br><br>
-              Mobile: &nbsp +880171****
-        </footer>
+        <?php
+            include 'footer.php';
+        ?>
     </div>
 
 </body>

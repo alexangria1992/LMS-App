@@ -10,7 +10,7 @@
 <html>
 <head>
 
-  <title>Student Registration</title>
+  <title>Admin Registration</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,7 +55,6 @@
           <input class="form-control" type="text" name="last" placeholder="Last Name" required=""> <br>
           <input class="form-control" type="text" name="username" placeholder="Username" required=""> <br>
           <input class="form-control" type="password" name="password" placeholder="Password" required=""> <br>
-          <input class="form-control" type="text" name="roll" placeholder="Roll No" required=""><br>
           <input class="form-control" type="text" name="email" placeholder="Email" required=""><br>
           <input class="form-control" type="text" name="contact" placeholder="Phone No" required=""><br>
           <input class="btn btn-default" type="submit" name="submit" value="Sign Up" style="color:black; width: 80px; height: 30px;" >
@@ -69,7 +68,7 @@
       if(isset($_POST['submit']))
       {
         $count = 0;
-        $sql = "SELECT username FROM student";
+        $sql = "SELECT username FROM admin";
         $res = mysqli_query($db, $sql);
 
         while($row=mysqli_fetch_assoc($res))
@@ -82,8 +81,8 @@
 
           if($count == 0)
 
-           { mysqli_query($db, "INSERT INTO student VALUES ('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[password]',
-          '$_POST[roll]', '$_POST[email]', '$_POST[contact]' );" );
+           { mysqli_query($db, "INSERT INTO admin VALUES ('', '$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[password]',
+           '$_POST[email]', '$_POST[contact]' );" );
 
           ?>
             <script type="text/javascript">

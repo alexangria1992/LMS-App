@@ -110,13 +110,13 @@ input, select {
 
 header {
     height: 130px;
-    width: 2135px;
+    width: 1903px;
     background-color: black;
 }
 
 section {
     height: 750px;
-    width: 2135px;
+    width: 1903px;
     background-color: grey;
   
 
@@ -124,7 +124,7 @@ section {
 
 footer {
     height: 255px;
-    width: 2135px;
+    width: 1903px;
     background-color: black;
 }
 
@@ -183,7 +183,7 @@ section .sec_img{
 /*---------------St_login--------------*/
 
 .box1{
-    height: 505px;
+    height: 410px;
     width: 400px;
     background-color: black;
     margin: 70px auto;
@@ -214,7 +214,7 @@ input {
 }
 
 .box2{
-    height: 589px;
+    height: 639px;
     width: 400px;
     background-color: black;
     margin: 0px auto;
@@ -226,3 +226,4 @@ input {
 form [name="Registration"] {
     margin: auto 50px;
 }  
+

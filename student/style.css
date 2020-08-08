@@ -110,13 +110,13 @@ input, select {
 
 header {
     height: 130px;
-    width: 2135px;
+    width: 1903px;
     background-color: black;
 }
 
 section {
     height: 750px;
-    width: 2135px;
+    width: 1903px;
     background-color: grey;
   
 
@@ -124,7 +124,7 @@ section {
 
 footer {
     height: 255px;
-    width: 2135px;
+    width: 1903px;
     background-color: black;
 }
 
