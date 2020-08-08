@@ -10,10 +10,6 @@
 
 
 
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +75,7 @@
           { 
               $count = 0;
               $res = mysqli_query($db, "SELECT * FROM admin WHERE username = '$_POST[username]' && password='$_POST[password]';");
+              $row = mysqli_fetch_assoc($res);
               $count = mysqli_num_rows($res);
 
               if($count==0)
@@ -95,7 +92,10 @@
               }
                else 
                {
+                 /*--------if username & password matches ---*/
                  $_SESSION['login_user'] = $_POST['username'];
+                 $_SESSION['pic'] = $row['pic'];
+
                  ?>
                   <script>
                     window.location="index.php";
