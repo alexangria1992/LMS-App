@@ -19,8 +19,8 @@
       </div>
         <ul class="nav navbar-nav">
             <li><a href="index.php">HOME</a></li>
-            <li><a href="">BOOKS</a></li>
-            <li><a href="">FEEDBACK</a></li>
+            <li><a href="books.php">BOOKS</a></li>
+            <li><a href="feedback.php">FEEDBACK</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li ><a href="student_login.php"><span class="glyphicon glyphicon-log-in"> LOGIN</span></a></li>
