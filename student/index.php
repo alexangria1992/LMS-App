@@ -47,12 +47,9 @@
             </div>
         </div>
         </section>
-        <footer>
-        <p style="color: white; text-align: center;">
-            <br><br>
-              Email: &nbsb Online.library@gmail.com <br><br>
-              Mobile: &nbsp +880171****
-        </footer>
+        <?php
+            include 'footer.php';
+        ?>
     </div>
 
 </body>
