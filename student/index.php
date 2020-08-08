@@ -27,12 +27,12 @@
             </div>
         <nav>
                 <ul>
-                    <li><a href="">HOME</a></li>
+                  
                     <li><a href="index.php">HOME</a></li>
-                    <li><a href="">BOOKS</a></li>
+                    <li><a href="books.php">BOOKS</a></li>
                     <li><a href="student_login.php">STUDENT-LOGIN</a></li>
-                    <li><a href="">ADMIN_LOGIN</a></li>
-                    <li><a href="">FEEDBACK</a></li>
+                    <li><a href="admin_login.php">ADMIN-LOGIN</a></li>
+                    <li><a href="feedback.php">FEEDBACK</a></li>
                 </ul>
             </nav>
         </header>
