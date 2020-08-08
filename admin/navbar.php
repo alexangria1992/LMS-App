@@ -38,8 +38,8 @@
                   
                   ?> 
                   <ul class="nav navbar-nav">
-                    <li><a href="student.php">
-                        STUDENT-INFORMATION
+                    <li><a href="profile.php">
+                      PROFILE
                       </a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">

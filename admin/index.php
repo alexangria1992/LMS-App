@@ -58,6 +58,7 @@
                             <li><a href="index.php">HOME</a></li>
                             <li><a href="books.php">BOOKS</a></li>
                             <li><a href="admin_login.php">ADMIN-LOGIN</a></li>
+                            <li><a href="registration.php">SIGN UP</a></li>
                             <li><a href="feedback.php">FEEDBACK</a></li>
                         </ul>
                     </nav>

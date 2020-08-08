@@ -66,39 +66,40 @@
 </section>
 
    <?php
-      if(isset($_POST['submit']))
-      {
-        $count = 0;
-        $sql = "SELECT username FROM student";
-        $res = mysqli_query($db, $sql);
+     if(isset($_POST['submit']))
+     {
+      $count=0;
+        $sql="SELECT username from `student`";
+        $res=mysqli_query($db,$sql);
 
         while($row=mysqli_fetch_assoc($res))
+        {
+          if($row['username']==$_POST['username'])
           {
-            if($row['username']==$_POST['username'])
-            {
-              $count = $count + 1;
-            }
+            $count=$count+1;
           }
-
-          if($count == 0)
-
-           { mysqli_query($db, "INSERT INTO student VALUES ('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[password]',
-          '$_POST[roll]', '$_POST[email]', '$_POST[contact]' );" );
+        }
+        if($count==0)
+        {
+          mysqli_query($db,"INSERT INTO `STUDENT` VALUES('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[password]', '$_POST[roll]', '$_POST[email]', '$_POST[contact]', 'username.png');");
+        ?>
+          <script type="text/javascript">
+           alert("Registration successful");
+          </script>
+        <?php
+        }
+        else
+        {
 
           ?>
             <script type="text/javascript">
-              alert("Registration successful");
-            </script>
-          <?php
-                }
-                else 
-                { 
-                  ?>
-            <script type="text/javascript">
               alert("The username already exist.");
             </script>
-            <?php
-                }
-            }
+          <?php
+
+        }
+
+      }
+
         ?>
 </body> 
