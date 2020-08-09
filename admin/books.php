@@ -96,7 +96,6 @@
 
 
   <div class="h"><a href="add.php">Add Books</a></div>
-  <div class="h"><a href="delete.php">Delete Books</a></div>
   <div class="h"><a href="#">Book request</a></div>
   <div class="h"><a href="#">Issue information</a></div>
 </div>
@@ -129,6 +128,12 @@ function closeNav() {
         <input class="form-control" type="text" name="search" placeholder="search books" required="">
         <button style="background-color: #6db6b9e6;" type="submit" name="submit" class="btn btn-default">
           <span class="glyphicon glyphicon-search"></span>
+      </button>  
+    </form>
+    <form action="" class="navbar-form" method="post" name="form1">
+        <input class="form-control" type="text" name="bid" placeholder="Enter Book ID" required="">
+        <button style="background-color: #6db6b9e6;" type="submit" name="submit1" class="btn btn-default">
+       Delete
       </button>  
     </form>
   </div>
@@ -203,10 +208,28 @@ function closeNav() {
         echo "</table>";
 
       }
+      if(isset($_POST['submit1']))
+        {
+          if(isset($_SESSION['login_user']))
+          {
+            mysqli_query($db, "DELETE from books WHERE bid='$_POST[bid]';");
+            ?>
+                <script type="text/javascript">
+                  alert("Delete Successful.");
+               </script>
+            <?php
+          }
+          else 
+          {
+            ?>
+                  <script type="text/javascript">
+                    alert("Please Login First.");
+                 </script>
+            <?php
+          }
+        }
 
-
-
-
+      
   ?>
   </div>
 </body>

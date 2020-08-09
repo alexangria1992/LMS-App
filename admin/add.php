@@ -147,7 +147,7 @@
           if(isset($_SESSION['login_user']))
           {
               mysqli_query($db, "INSERT INTO books VALUES('$_POST[bid]', '$_POST[name]', '$_POST[authors]',
-              '$_POST[edition]', '$_POST[status]', '$_POST[quantity]', '$_POST[department]', );");
+              '$_POST[edition]', '$_POST[status]', '$_POST[quantity]', '$_POST[department]' );");
               ?>
                 <script type="text/javascript">
                     alert("Book Added Successfully");
