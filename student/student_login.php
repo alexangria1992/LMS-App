@@ -67,8 +67,8 @@
       </form>
       <p style="color: white; padding-left: 15px;">
         <br><br>
-        <a style="color:white;" href="">Forgot password?</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-        New to this website?<a style="color: white;" href="registration.php">Sign Up</a>
+        <a style="color:yellow; text-decoration: none;" href="update_password.php">Forgot password?</a> &nbsp &nbsp &nbsp &nbsp
+        New to this website?<a style="color: yellow; text-decoration: none;" href="registration.php">&nbsp Sign Up</a>
       </p>
     </div>
   </div>
