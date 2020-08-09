@@ -65,6 +65,15 @@
 {
   margin-left: 20px;
 }
+
+.h:hover
+{
+    color: white;
+    width: 300px;
+    height: 50px;
+    background-color: #00544c;
+
+}
   </style>
 </head>
 <body>
@@ -74,19 +83,22 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
              <div style="color: white; margin-left: 60px; font-size: 20px;">   
+             
                     <?php
-                       echo "<img class='img-circle profile_img' height=100 width=100 src='images/".$_SESSION['pic']."'>";
+                    if(isset($_SESSION['login_user']))
+                       {echo "<img class='img-circle profile_img' height=100 width=100 src='images/".$_SESSION['pic']."'>";
                        echo "</br></br>";
 
                        echo "Welcome ".$_SESSION['login_user'];
+                       }
                     ?>
-              </div>
+              </div><br><br>
 
 
-  <a href="profile.php">Profile</a>
-  <a href="book.php">Books</a>
-  <a href="#">Book request</a>
-  <a href="#">Issue information</a>
+  <div class="h"><a href="add.php">Add Books</a></div>
+  <div class="h"><a href="delete.php">Delete Books</a></div>
+  <div class="h"><a href="#">Book request</a></div>
+  <div class="h"><a href="#">Issue information</a></div>
 </div>
 
 <div id="main">

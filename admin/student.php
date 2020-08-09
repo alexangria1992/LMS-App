@@ -78,10 +78,13 @@
 
              <div style="color: white; margin-left: 60px; font-size: 20px;">   
                     <?php
-                       echo "<img class='img-circle profile_img' height=100 width=100 src='images/".$_SESSION['pic']."'>";
+                    
+                    if(isset($_SESSION['login_user']))
+                       {echo "<img class='img-circle profile_img' height=100 width=100 src='images/".$_SESSION['pic']."'>";
                        echo "</br></br>";
 
                        echo "Welcome ".$_SESSION['login_user'];
+                       }
                     ?>
               </div>
 
@@ -99,8 +102,8 @@
 
 <script>
 function openNav() {
-  document.getElementById("mySidenav").style.width = "300px";
-  document.getElementById("main").style.marginLeft = "300px";
+  document.getElementById("mySidenav").style.width = "500px";
+  document.getElementById("main").style.marginLeft = "500px";
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
