@@ -14,11 +14,21 @@
     <style type="text/css">
     .srch 
     {
-      padding-left: 1600px;
+      padding-left: 800px;
     }
     .srch 
     {
-      padding-left: 1600px;
+      padding-left: 800px;
+    }
+
+    .form-control 
+    {
+        width: 300px;
+        height: 40px;
+        background-color: black;
+        color: white;
+
+
     }
 
     body {
@@ -133,6 +143,15 @@ function closeNav() {
 <br>
 
 <div class="container">
+    <div class="srch">
+        <form method="post" action="" name="form1"><br>
+            <input type="text" name="username" class="form-control" placeholder="Username" required=""><br>
+            <input type="text" name="bid" class="form-control" placeholder="BID" required=""><br>
+            <button class="btn btn-default" name="submit" type="submit">Submit
+
+            </button><br>
+        </form>
+    </div>
     
     <h3 style="text-align: center;">Request of Book</h3>
 
@@ -184,47 +203,23 @@ function closeNav() {
                 }
             }
 
-    
-// if(isset($_SESSION['login_user']))
-//       {
-//           $q = mysqli_query($db, "SELECT * FROM issue_book WHERE username = '$_SESSION[login_user]';");
-//           if(mysqli_num_rows($q) == 0)
-//           {
-//               echo "<h2><b>";
-//               echo "There's no pending request";
-//               echo "</b></h2>";
-//           }
-//           else 
-//           {
-//               echo "<table class='table table-bordered table-hover'>";
-//                echo "<tr style='background-color: #6db6b9e6;'>";
-//                 echo "<th>"; echo "Book-ID"; echo "</th>";
-//                 echo "<th>"; echo "Approve Status"; echo "</th>";
-//                 echo "<th>"; echo "Issue Date"; echo "</th>";
-//                 echo "<th>"; echo "Request Date"; echo "</th>";
-           
-//           echo "</tr>";
-
-//           while($row=mysqli_fetch_assoc($q))
-//           {
-//               echo "<tr>";
-//               echo "<td>"; echo $row['bid']; echo "</td>";
-//               echo "<td>"; echo $row['approve']; echo "</td>";
-//               echo "<td>"; echo $row['issue']; echo "</td>";
-//               echo "<td>"; echo $row['returns']; echo "</td>";
-            
-//               echo "</tr>";
-//           }
-
-//           echo "</table>";
-//             }
-//       }
-//       else 
-//       {   echo "</b></br></br>";
-//           echo "<h2><b>";
-//           echo " Please login first to see the request information.";
-//           echo "</h2></b>";
-//       }
+            else 
+            {
+                ?><br>
+                    <h4 style="text-align: center; color: yellow;">You need to login to see the request</h4>
+                 
+                <?php
+            }
+            if(isset($_POST['submit']))
+            {
+                $_SESSION['st_name'] = $_POST['username'];
+                $_SESSION[''] = $_POST['bid'];
+                ?>
+                    <script type="text/javascript">
+                        window.location="approve.php"
+                    </script>
+                <?php
+            }
      ?>
      </div>
  </div>
