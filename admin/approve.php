@@ -1,41 +1,33 @@
 <?php
-  include 'connection.php';
-  include 'navbar.php';
-  
-
+  include "connection.php";
+  include "navbar.php";
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Request</title>
-    <style type="text/css">
-    .srch 
-    {
-      padding-left: 800px;
-    }
-    .srch 
-    {
-      padding-left: 800px;
-    }
+	<title>Approve Request</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .form-control 
-    {
-        width: 300px;
-        height: 40px;
-        background-color: black;
-        color: white;
+	<style type="text/css">
 
+		.srch
+		{
+			padding-left: 850px;
 
-    }
-
-    body {
-  font-family: "Lato", sans-serif;
-  background-image: url(images/1111.jpg);
-  background-repeat: no-repeat;
-  transition: background-color .5s;
+		}
+		.form-control
+		{
+			width: 300px;
+			height: 45px;
+			background-color: black;
+			color: white;
+		}
+		
+		body {
+			background-image: url("images/1111.jpg");
+			background-repeat: no-repeat;
+  	font-family: "Lato", sans-serif;
+  	transition: background-color .5s;
 }
 
 .sidenav {
@@ -62,7 +54,7 @@
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: white;
 }
 
 .sidenav .closebtn {
@@ -73,76 +65,124 @@
   margin-left: 50px;
 }
 
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
 .img-circle
 {
-  margin-left: 20px;
+	margin-left: 20px;
 }
-
 .h:hover
 {
-    color: white;
-    width: 300px;
-    height: 50px;
-    background-color: #00544c;
-
+	color:white;
+	width: 300px;
+	height: 50px;
+	background-color: #00544c;
 }
 .container
 {
-    height: 600px;
-    background-color: black;
-    opacity: .8;
-    color: white;
+	height: 600px;
+	background-color: black;
+	opacity: .8;
+	color: white;
 }
-  </style>
+.Approve
+{
+  margin-left: 420px;
+}
+
+
+	</style>
+
 </head>
 <body>
-<div id="mySidenav" class="sidenav">
+<!--_________________sidenav_______________-->
+	
+	<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-             <div style="color: white; margin-left: 60px; font-size: 20px;">   
-             
-                    <?php
-                    if(isset($_SESSION['login_user']))
-                       {echo "<img class='img-circle profile_img' height=100 width=100 src='images/".$_SESSION['pic']."'>";
-                       echo "</br></br>";
+  			<div style="color: white; margin-left: 60px; font-size: 20px;">
 
-                       echo "Welcome ".$_SESSION['login_user'];
-                       }
-                    ?>
-              </div><br><br>
+                <?php
+                if(isset($_SESSION['login_user']))
 
+                { 	echo "<img class='img-circle profile_img' height=120 width=120 src='images/".$_SESSION['pic']."'>";
+                    echo "</br></br>";
 
-  <div class="h"><a href="add.php">Add Books</a></div>
-  <div class="h"><a href="request.php">Book request</a></div>
-  <div class="h"><a href="issue_info.php">Issue information</a></div>
+                    echo "Welcome ".$_SESSION['login_user']; 
+                }
+                ?>
+            </div><br><br>
+
+ 
+  <div class="h"> <a href="books.php">Books</a></div>
+  <div class="h"> <a href="request.php">Book Request</a></div>
+  <div class="h"> <a href="issue_info.php">Issue Information</a></div>
+  <div class="h"><a href="expired.php">Expired List</a></div>
 </div>
 
 <div id="main">
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
+	<script>
+	function openNav() {
+	  document.getElementById("mySidenav").style.width = "300px";
+	  document.getElementById("main").style.marginLeft = "300px";
+	  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+	}
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "300px";
-  document.getElementById("main").style.marginLeft = "300px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "0";
+	  document.body.style.backgroundColor = "white";
+	}
+	</script>
+  <div class="container">
+    <br><h3 style="text-align: center;">Approve Request</h3><br><br>
+    
+    <form class="Approve" action="" method="post">
+        <input class="form-control" type="text" name="approve" placeholder="Yes or No" required=""><br>
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-  document.body.style.backgroundColor = "white";
-}
-</script>
-<div class="container">
+        <input type="text" name="issue" placeholder="Issue Date yyyy-mm-dd" required="" class="form-control"><br>
 
+        <input type="text" name="return" placeholder="Return Date yyyy-mm-dd" required="" class="form-control"><br>
+        <button class="btn btn-default" type="submit" name="submit">Approve</button>
+    </form>
+  
+  </div>
 </div>
-</div>
+
+<?php
+  if(isset($_POST['submit']))
+  {
+    mysqli_query($db,"UPDATE  `issue_book` SET  `approve` =  '$_POST[approve]', `issue` =  '$_POST[issue]', `return` =  '$_POST[return]' WHERE username='$_SESSION[name]' and bid='$_SESSION[bid]';");
+
+    mysqli_query($db,"UPDATE books SET quantity = quantity-1 where bid='$_SESSION[bid]' ;");
+
+    $res=mysqli_query($db,"SELECT quantity from books where bid='$_SESSION[bid]';");
+
+    while($row=mysqli_fetch_assoc($res))
+    {
+      if($row['quantity']==0)
+      {
+        mysqli_query($db,"UPDATE books SET status='not-available' where bid='$_SESSION[bid]';");
+      }
+    }
+    ?>
+      <script type="text/javascript">
+        alert("Updated successfully.");
+        window.location="request.php"
+      </script>
+    <?php
+  }
+?>
 </body>
 </html>

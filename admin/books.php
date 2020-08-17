@@ -97,7 +97,9 @@
 
   <div class="h"><a href="add.php">Add Books</a></div>
   <div class="h"><a href="request.php">Book request</a></div>
-  <div class="h"><a href="">Issue information</a></div>
+  <div class="h"><a href="issue_info.php">Issue information</a></div>
+  <div class="h"><a href="expired.php"> Expired List</a></div>
+
 </div>
 
 <div id="main">

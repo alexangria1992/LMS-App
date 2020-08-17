@@ -14,7 +14,7 @@
   <style type="text/css">
     .srch 
     {
-      padding-left: 1600px;
+      padding-left: 1300px;
     }
     .srch 
     {
@@ -89,10 +89,11 @@
               </div>
 
 
-  <a href="profile.php">Profile</a>
-  <a href="book.php">Books</a>
-  <a href="#">Book request</a>
-  <a href="#">Issue information</a>
+
+   <div class="h"><a href="request.php">Book request</a></div>
+  <div class="h"><a href="issue_info.php">Issue information</a></div>
+  <div class="h"><a href="expired.php"> Expired List</a></div>
+
 </div>
 
 <div id="main">
@@ -114,6 +115,7 @@ function closeNav() {
 }
 </script>
   <!--______________search bar___________-->
+  <div class="container">
   <div class="srch"> 
     <form action="" class="navbar-form" method="post" name="form1">
         <input class="form-control" type="text" name="search" placeholder="search username" required="">
@@ -194,5 +196,6 @@ function closeNav() {
 
 
   ?>
+  </div>
 </body>
 </html>

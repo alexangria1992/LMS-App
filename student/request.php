@@ -145,7 +145,7 @@ if(isset($_SESSION['login_user']))
               echo "<td>"; echo $row['bid']; echo "</td>";
               echo "<td>"; echo $row['approve']; echo "</td>";
               echo "<td>"; echo $row['issue']; echo "</td>";
-              echo "<td>"; echo $row['returns']; echo "</td>";
+              echo "<td>"; echo $row['return']; echo "</td>";
             
               echo "</tr>";
           }
